@@ -1,0 +1,19 @@
+#!/bin/bash
+#This bash build file creates the files to read from and write to, and then executes the myCopier C++ file
+#It takes the desired name of the read file, followed by the desired name of the write file as arguments
+#Usage: ./myCopier <readFile> <writeFile>
+if [ $# -eq 2 ]
+then
+echo "Creating File To Read From - $1"
+echo "This was a very inspiring homework assignment" >> $1
+echo "It's very important to be able to access and manipulate files" >> $1
+echo "They allow for a form of non-volatile storage where data is stored in memory" >> $1
+echo "I'm very nervous writing this right now because I'm not sure if this will work or not" >> $1
+echo "But I'm pretty confident" >> $1
+echo "Wish me the best of luck" >> $1
+echo "-Jason :)" >> $1
+echo "Creating File To Write To - $2"
+touch $2
+fi
+./myCopierC++ $1 $2
+
